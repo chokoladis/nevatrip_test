@@ -1,0 +1,119 @@
+*{
+    transition: all .3s;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family:'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.container{
+    width: 85%;
+    margin: 27px auto;
+}
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.cards .img_main img{
+    width: 100%;
+}
+.cards .img_main{
+    position: relative;
+    color: #3E3E3E;
+}
+.card{
+    width: 100%;
+    border: 0.3px solid #828282;
+    border-radius: 16px;
+    margin-bottom: 30px;
+}
+
+.card .img_main::after{
+    content: "НОВИНКА";
+    font-weight: 600;
+    font-size: 12px;
+    padding: 8px 17px;
+    background: #FED74B;
+    position: absolute;
+    top: 40px;
+    left: 0;
+}
+.container_card{
+    margin: 14px 12px 18px;
+}
+.time_out{
+    color: #9E9E9E;
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    display: flex;
+}
+.time_out span{
+    margin-left: 9px;
+}
+.card h6{
+    font-size: 14px;
+    line-height: 22px;
+}
+.options{
+    margin-top: 20px;
+}
+.opt{
+    display: flex;
+    align-items: start;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+.opt img{
+    margin-right: 20px;
+}
+.times{
+    margin-top: 14px;
+}
+.times span{
+    border-radius: 14px;
+    background: #D9E8FF;
+    padding: 6px 13px;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    margin-top: -5px;
+}
+.pay{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 35px;
+}
+.pay h5{
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 20px;
+}
+.pay p{
+    font-size: 10px;
+    line-height: 20px;
+}
+.btn{
+    border: 0.5px solid #CBA500;
+    border-radius: 20px;
+    padding: 12px 41px;
+    color: #404040;
+    background: #FED74B;
+    font-size: 14px;
+    text-decoration: none;
+}
+.card:nth-child(2) .img_main::after{
+    background: #7553FF;
+    color: white;
+    top: 0px;
+    border-radius: 15px 0px 12px;
+}
