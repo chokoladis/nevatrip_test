@@ -6,6 +6,8 @@ body{
     margin: 0;
     padding: 0;
     font-family:'Open Sans', 'Helvetica Neue', sans-serif;
+    min-width: 320px;
+
 }
 .container{
     width: 85%;
@@ -19,13 +21,16 @@ h1,h2,h3,h4,h5,h6,p{
     flex-wrap: wrap;
     flex-direction: row;
 }
-.cards .img_main img{
-    width: 100%;
-}
 .cards .img_main{
     position: relative;
     color: #3E3E3E;
+    min-width: 270px;
+    border-radius: 16px 16px 0px 0px;
 }
+.cards .img_main img{
+    width: 100%;
+}
+
 .card{
     width: 100%;
     border: 0.3px solid #828282;
@@ -76,6 +81,12 @@ h1,h2,h3,h4,h5,h6,p{
 }
 .times{
     margin-top: 14px;
+    display: flex;
+    grid-gap: 8px;
+    width: 93%;
+    overflow: hidden;
+    flex-wrap: unset;
+    height: 35px;
 }
 .times span{
     border-radius: 14px;
@@ -86,26 +97,30 @@ h1,h2,h3,h4,h5,h6,p{
     display: flex;
     flex-direction: column;
     margin-top: -5px;
+    width: 100%;
+    overflow: hidden;
 }
 .pay{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     margin-top: 35px;
 }
 .pay h5{
-    font-size: 30px;
+    font-size: 26px;
     font-weight: 400;
     line-height: 20px;
 }
 .pay p{
     font-size: 10px;
     line-height: 20px;
+    display: none;
 }
 .btn{
     border: 0.5px solid #CBA500;
     border-radius: 20px;
-    padding: 12px 41px;
+    padding: 18px 41px;
     color: #404040;
     background: #FED74B;
     font-size: 14px;
@@ -116,4 +131,109 @@ h1,h2,h3,h4,h5,h6,p{
     color: white;
     top: 0px;
     border-radius: 15px 0px 12px;
+}
+a.more{
+    text-decoration: none;
+    border-radius: 14px;
+    background: #7eaff8;
+    color: white;
+    padding: 6px 13px;
+    display: block;
+}
+@media screen and (min-width:320px){
+    .times{
+        flex-wrap: wrap;
+    }
+}
+@media screen and (min-width:406px){
+    
+    .pay{
+        align-items: flex-start;
+    }
+    .pay p{
+        display: block;
+    }
+    .times{
+        flex-wrap: unset;
+        width: 96%;
+    }
+    a.more{
+        display: none; 
+    }
+}
+
+@media screen and (min-width:640px){
+    .card{
+        display: flex;
+    }
+    .cards .img_main{
+        overflow: hidden;
+        position: relative;
+        border-radius: 16px 0px 0px 16px;
+    }
+    .cards .img_main img{
+        left: -130%;
+        position: absolute;
+        top: -45%;
+        width: unset;
+        
+        transform: scale(0.6);
+    }
+    .container_card{
+        width: 46.5%;
+    }
+    .times{
+        width: 91%;
+    }
+    a.more{
+        display: block;
+    }
+    .pay{
+        align-items: center;
+    }
+    .pay p{
+        display: none;
+    }
+}
+@media screen and (min-width:720px){
+    .container_card{
+        width: 51%;
+    }
+    .img_main{
+        width: 46%;
+    }
+    .times{
+        flex-wrap: unset;
+        width: 96%;
+    }
+    a.more{
+        display: none; 
+    }
+    .pay{
+        align-items: flex-start;
+    }
+    .pay p{
+        display: block;
+    }
+}
+@media screen and (min-width:760px){
+    .card .img_main img{
+        top: -50%;
+    }
+}
+@media screen and (min-width:1000px){
+    .card .img_main{
+        width: 49%;
+    }
+    .card .img_main img{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: scale(1);
+    }
+    .container_card {
+        width: 49%;
+    }
 }
