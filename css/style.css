@@ -88,6 +88,11 @@ h1,h2,h3,h4,h5,h6,p{
     flex-wrap: unset;
     height: 35px;
 }
+.times_full{
+    width: 96% !important;
+    flex-wrap: wrap !important;
+    height: auto !important;
+}
 .times span{
     border-radius: 14px;
     background: #D9E8FF;
@@ -174,10 +179,13 @@ a.more{
     .cards .img_main img{
         left: -130%;
         position: absolute;
-        top: -45%;
+        top: -36%;
         width: unset;
         
-        transform: scale(0.6);
+        transform: scale(0.65);
+    }
+    .cards .img_main:nth-child(2) img{
+        top: -40%;
     }
     .container_card{
         width: 46.5%;
@@ -190,9 +198,13 @@ a.more{
     }
     .pay{
         align-items: center;
+        justify-content: unset;
     }
     .pay p{
         display: none;
+    }
+    .pay .btn{
+        margin-left: 20px;
     }
 }
 @media screen and (min-width:720px){
